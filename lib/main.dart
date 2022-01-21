@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import './screen/page1.dart';
 import './screen/page2.dart';
+import './screen/page3.dart';
+import './screen/page4.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,6 +32,8 @@ class MyApp extends StatelessWidget {
       routes: {
         '/page1': (context) => const page1(),
         '/page2': (context) => const page2(),
+        '/page3': (context) => page3(),
+        '/page4': (context) => const page4(),
       },
     );
   }
