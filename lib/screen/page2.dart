@@ -9,6 +9,11 @@ class page2 extends StatelessWidget {
       appBar: AppBar(
         title: Text('page2'),
       ),
+      body: ElevatedButton(
+          onPressed: () {
+            Navigator.pushNamed(context, '/page5');
+          },
+          child: Text('to page5')),
     );
   }
 }

@@ -1,8 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import './screen/page1.dart';
 import './screen/page2.dart';
 import './screen/page3.dart';
 import './screen/page4.dart';
+import './screen/page5.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,6 +37,13 @@ class MyApp extends StatelessWidget {
         '/page2': (context) => const page2(),
         '/page3': (context) => page3(),
         '/page4': (context) => const page4(),
+      },
+      onGenerateRoute: (RouteSettings settings) {
+        switch (settings.name) {
+          case '/page5':
+            log('Already to page5');
+            return MaterialPageRoute(builder: (context) => const page5());
+        }
       },
     );
   }
