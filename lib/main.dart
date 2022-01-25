@@ -6,6 +6,8 @@ import './screen/page2.dart';
 import './screen/page3.dart';
 import './screen/page4.dart';
 import './screen/page5.dart';
+import './screen/welcomepage.dart';
+import './screen/homepage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,6 +39,8 @@ class MyApp extends StatelessWidget {
         '/page2': (context) => const page2(),
         '/page3': (context) => page3(),
         '/page4': (context) => const page4(),
+        '/welcomepage': (context) => welcomepage(),
+        '/homepage': (context) => const homepage(),
       },
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
@@ -54,28 +58,6 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Practice of flutter"),
-      ),
-      body: Container(
-        alignment: Alignment.center,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/page1');
-                },
-                child: const Text('navigate to page1')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/page2');
-                },
-                child: const Text('navigate to page2'))
-          ],
-        ),
-      ),
-    );
+    return welcomepage();
   }
 }
