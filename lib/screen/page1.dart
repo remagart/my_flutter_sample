@@ -3,6 +3,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import './page3.dart';
 
+import 'package:fluttertoast/fluttertoast.dart';
+
 class page1 extends StatelessWidget {
   const page1({Key? key}) : super(key: key);
 
@@ -16,6 +18,7 @@ class page1 extends StatelessWidget {
                     num: par,
                   )));
       log(result.toString());
+      Fluttertoast.showToast(msg: result.toString());
     }
 
     return Scaffold(
