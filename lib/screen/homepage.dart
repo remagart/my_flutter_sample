@@ -5,28 +5,29 @@ class homepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> list = <Widget>[
+      ListTile(
+        title: const Text("Practice Navigation"),
+        subtitle: const Text("To know how to use navigation in flutter"),
+        onTap: () {
+          Navigator.pushNamed(context, "/practice_navigation_index");
+        },
+      ),
+    ];
+
     return Scaffold(
       appBar: AppBar(
         title: Text("Practice of flutter"),
       ),
-      body: Container(
-        alignment: Alignment.center,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/page1');
-                },
-                child: const Text('navigate to page1')),
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/page2');
-                },
-                child: const Text('navigate to page2'))
-          ],
-        ),
-      ),
+      body: ListView.builder(
+          itemCount: list.length,
+          itemBuilder: (BuildContext context, int index) {
+            return Container(
+              // height: 50,
+              color: Colors.amber[(index + 1) * 100],
+              child: Center(child: list[index]),
+            );
+          }),
     );
   }
 }
