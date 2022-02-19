@@ -10,6 +10,7 @@ import './screen/welcomepage.dart';
 import './screen/homepage.dart';
 import './screen/practice_navigation/practice_navigation_index.dart';
 import './screen/lifecycle/lifecycle_index.dart';
+import './screen/lifecycle/lifecycle_page2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/practice_navigation_index': (context) =>
             const practice_navigation_index(),
         '/lifecycle_index': (context) => lifecycle_index(),
+        '/lifecycle_page2': (context) => lifecycle_page2(),
       },
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
