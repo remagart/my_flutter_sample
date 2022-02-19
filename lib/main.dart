@@ -9,6 +9,7 @@ import './screen/page5.dart';
 import './screen/welcomepage.dart';
 import './screen/homepage.dart';
 import './screen/practice_navigation/practice_navigation_index.dart';
+import './screen/lifecycle/lifecycle_index.dart';
 
 void main() {
   runApp(const MyApp());
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
         '/homepage': (context) => const homepage(),
         '/practice_navigation_index': (context) =>
             const practice_navigation_index(),
+        '/lifecycle_index': (context) => lifecycle_index(),
       },
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {

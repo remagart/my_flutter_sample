@@ -13,6 +13,13 @@ class homepage extends StatelessWidget {
           Navigator.pushNamed(context, "/practice_navigation_index");
         },
       ),
+      ListTile(
+        title: const Text("Practice lifecycle of StatefulWidget"),
+        subtitle: const Text("To know all the time in each lifecycle"),
+        onTap: () {
+          Navigator.pushNamed(context, "/lifecycle_index");
+        },
+      )
     ];
 
     return Scaffold(
