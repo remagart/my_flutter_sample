@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class lifecycle_index extends StatefulWidget {
-  lifecycle_index({Key? key}) : super(key: key);
+  String barName = "";
+  lifecycle_index({Key? key, this.barName = "Practice"}) : super(key: key);
 
   @override
   State<lifecycle_index> createState() {

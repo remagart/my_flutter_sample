@@ -1,6 +1,10 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:my_flutter_sample/screen/003_Future/index.dart';
+import 'package:my_flutter_sample/screen/004_Stream/index.dart';
+import 'package:my_flutter_sample/screen/005_Async_await/index.dart';
+import 'package:my_flutter_sample/screen/006_isolate_event_loop/index.dart';
 import './screen/page1.dart';
 import './screen/page2.dart';
 import './screen/page3.dart';
@@ -43,11 +47,14 @@ class MyApp extends StatelessWidget {
         '/page3': (context) => page3(),
         '/page4': (context) => const page4(),
         '/welcomepage': (context) => welcomepage(),
-        '/homepage': (context) => const homepage(),
-        '/practice_navigation_index': (context) =>
-            const practice_navigation_index(),
+        '/homepage': (context) => homepage(),
+        '/practice_navigation_index': (context) => practice_navigation_index(),
         '/lifecycle_index': (context) => lifecycle_index(),
         '/lifecycle_page2': (context) => lifecycle_page2(),
+        '/futureIndex': ((context) => futureIndex()),
+        '/streamIndex': (context) => streamIndex(),
+        '/asyncawaitIndex': (context) => asyncawaitIndex(),
+        '/isolateIndex': (context) => isolateIndex()
       },
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {

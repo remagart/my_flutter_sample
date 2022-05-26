@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class practice_navigation_index extends StatelessWidget {
-  const practice_navigation_index({Key? key}) : super(key: key);
+  String barName = "";
+  practice_navigation_index({Key? key, this.barName = "Practice"})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
