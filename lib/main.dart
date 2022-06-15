@@ -5,6 +5,7 @@ import 'package:my_flutter_sample/screen/003_Future/index.dart';
 import 'package:my_flutter_sample/screen/004_Stream/index.dart';
 import 'package:my_flutter_sample/screen/005_Async_await/index.dart';
 import 'package:my_flutter_sample/screen/006_isolate_event_loop/index.dart';
+import 'package:my_flutter_sample/screen/007_gesture_detector/index.dart';
 import './screen/page1.dart';
 import './screen/page2.dart';
 import './screen/page3.dart';
@@ -54,7 +55,10 @@ class MyApp extends StatelessWidget {
         '/futureIndex': ((context) => futureIndex()),
         '/streamIndex': (context) => streamIndex(),
         '/asyncawaitIndex': (context) => asyncawaitIndex(),
-        '/isolateIndex': (context) => isolateIndex()
+        '/isolateIndex': (context) => isolateIndex(),
+        '/GestureDetectorIndex': (context) => const GestureDetectorIndex(
+              barName: '',
+            )
       },
       onGenerateRoute: (RouteSettings settings) {
         switch (settings.name) {
